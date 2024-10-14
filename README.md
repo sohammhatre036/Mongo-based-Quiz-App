@@ -15,6 +15,19 @@ Frontend: Streamlit
 Backend: MongoDB
 Language: Python 3.8+
 
+Steps:
+  1. Clone the repository :
+  git clone https://github.com/yourusername/quiz-app
+  cd quiz-app
+
+  2. Install the required Python packages:
+  pip install -r requirements.txt
+
+  3. Start your MongoDB server if running locally:
+  mongod
+
+  4. Run the app using Streamlit using cmd:
+  streamlit run app.py
 
 # Taking the Quiz:
 When you open the app, you’ll see a list of quiz questions.
