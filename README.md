@@ -3,10 +3,13 @@ This project is a simple Quiz App built using Streamlit for the frontend and Mon
 The app allows users to take a quiz and displays their score after submission. The quiz questions and answers are stored in MongoDB.
 
 # Features
-Users can take a quiz and receive their score immediately.
-Admin can add new quiz questions dynamically.
-Questions and answers are stored in MongoDB.
-Real-time result calculation.
+  Users can take a quiz and receive their score immediately.
+  
+  Can add new quiz questions dynamically.
+  
+  Questions and answers are stored in MongoDB.
+  
+  Real-time result calculation.
 
 Frontend: Streamlit
 Backend: MongoDB
