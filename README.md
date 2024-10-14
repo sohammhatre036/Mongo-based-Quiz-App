@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c470bbb4-0204-4800-bd95-59a984d24741)# Project Overview
+# Project Overview
 This project is a simple Quiz App built using Streamlit for the frontend and MongoDB for backend data storage. 
 The app allows users to take a quiz and displays their score after submission. The quiz questions and answers are stored in MongoDB.
 
@@ -38,5 +38,5 @@ By default, the app connects to a MongoDB instance running on localhost:27017.
 You can change the connection string in the app.py file to match your MongoDB configuration.
 
 # Data Storage In MongoDB
-
+![image](https://github.com/user-attachments/assets/c470bbb4-0204-4800-bd95-59a984d24741)
 
