@@ -72,7 +72,7 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'sohampracapp'
-          slot-name: 'Production'
+          
 
       # Start Streamlit app after deployment
       - name: 'Start Streamlit app'
