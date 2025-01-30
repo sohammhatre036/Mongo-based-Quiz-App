@@ -2,7 +2,7 @@ import streamlit as st
 from pymongo import MongoClient
 
 # Connect to MongoDB (use your MongoDB Atlas URI if you're using cloud)
-client = MongoClient('mongodb://localhost:27017/')  # Use your connection URI
+client = MongoClient('mongodb+srv://soham12:soham1212@cluster0.ugxz0.mongodb.net/')  # Use your connection URI
 db = client['quizdb']
 quiz_collection = db['quiz']
 
