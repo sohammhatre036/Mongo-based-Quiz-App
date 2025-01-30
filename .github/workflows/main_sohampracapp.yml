@@ -1,8 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
-
-name: Build and deploy Python app to Azure Web App - sohampracapp
+name: Build and deploy Streamlit app to Azure Web App - sohampracapp
 
 on:
   push:
@@ -32,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
         
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+      # Optional: Add step to run tests here (PyTest, Streamlit tests, etc.)
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -40,7 +36,7 @@ jobs:
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
         with:
-          name: python-app
+          name: streamlit-app
           path: |
             release.zip
             !venv/
@@ -59,12 +55,11 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: python-app
+          name: streamlit-app
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -78,4 +73,13 @@ jobs:
         with:
           app-name: 'sohampracapp'
           slot-name: 'Production'
-          
+
+      # Start Streamlit app after deployment
+      - name: 'Start Streamlit app'
+        run: |
+          echo "Starting Streamlit app..."
+          screen -d -m streamlit run app.py  # Adjust 'app.py' to your Streamlit script name
+
+      # Optional: Add a wait time for the Streamlit app to be fully started
+      - name: Wait for the app to be ready
+        run: sleep 30  # Adjust the wait time based on how long it takes for your app to be ready
