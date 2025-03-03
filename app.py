@@ -7,7 +7,7 @@ db = client['quizdb']
 quiz_collection = db['quiz']
 
 # Add Sidebar navigation
-menu = ["Take Quiz", "Add Quiz"]
+menu = ["Take The Quiz", "Add Quiz"]
 choice = st.sidebar.selectbox("Menu", menu)
 
 # Quiz taking functionality
